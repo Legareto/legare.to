@@ -3,12 +3,6 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import {
-  HomeIcon,
-  IdentificationIcon,
-  AcademicCapIcon,
-  BeakerIcon,
-  NewspaperIcon,
-  EnvelopeIcon,
   XMarkIcon,
   Bars3Icon,
   ChevronRightIcon,
@@ -20,8 +14,10 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Sidebar() {
+export default function Sidebar(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  console.log("Title prop:", props.title);
 
   return (
     <div>
@@ -216,11 +212,11 @@ export default function Sidebar() {
           className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
           onClick={() => setSidebarOpen(true)}
         >
-          <span className="sr-only">Open sidebar</span>
+          <span className="sr-only">Ouvrir menu</span>
           <Bars3Icon className="h-6 w-6" aria-hidden="true" />
         </button>
         <div className="flex-1 text-sm font-semibold leading-6 text-gray-900">
-          Dashboard
+          {props.title}
         </div>
       </div>
     </div>
