@@ -17,7 +17,7 @@ function classNames(...classes) {
 export default function Sidebar(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  console.log("Title prop:", props.title);
+  // console.log("Title prop:", props.title);
 
   return (
     <div>

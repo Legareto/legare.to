@@ -1,7 +1,7 @@
 import Sidebar from "@/components/Sidebar";
 
-export default function Home(props) {
-  const title = "Accueil";
+export default function Curriculumvitae(props) {
+  const title = "Curriculum Vitae";
 
   return (
     <div>
